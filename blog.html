@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Tecnológico - Orbix | Noticias e Innovación en Desarrollo Web y Apps</title>
+    <meta name="description" content="Blog de Orbix: últimas tendencias en desarrollo web, aplicaciones móviles, inteligencia artificial, ciberseguridad y tecnologías emergentes. Artículos técnicos y noticias de innovación.">
+    <meta name="keywords" content="blog tecnológico, desarrollo web noticias, aplicaciones móviles tendencias, inteligencia artificial, ciberseguridad, innovación tecnológica, Orbix blog">
+    <meta name="author" content="Orbix">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="blog">
+    <meta property="og:url" content="https://orbix.com/blog">
+    <meta property="og:title" content="Blog Tecnológico - Orbix">
+    <meta property="og:description" content="Últimas tendencias en desarrollo web, apps móviles e IA. Artículos técnicos y noticias de innovación tecnológica.">
+    <meta property="og:image" content="https://orbix.com/assets/images/orbix-blog-preview.jpg">
+    <meta property="og:site_name" content="Orbix">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Blog Tecnológico - Orbix">
+    <meta property="twitter:description" content="Tendencias en desarrollo web, apps móviles e IA. Innovación tecnológica.">
+    <meta property="twitter:image" content="https://orbix.com/assets/images/orbix-blog-preview.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://orbix.com/blog">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="nav-global.css">
+    <link rel="stylesheet" href="sentinel-unified.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog Tecnológico Orbix",
+      "description": "Blog sobre desarrollo web, aplicaciones móviles, inteligencia artificial y tecnologías emergentes",
+      "url": "https://orbix.com/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Orbix",
+        "logo": "https://orbix.com/assets/images/orbix-logo.png"
+      },
+      "inLanguage": "es",
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "El Futuro del Desarrollo Web",
+          "datePublished": "2025-08-20",
+          "author": {
+            "@type": "Organization",
+            "name": "Orbix"
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(0, 255, 128, 0.1) 0%, rgba(0, 150, 255, 0.1) 100%);
+            border-radius: 15px;
+            border: 2px solid rgba(0, 255, 128, 0.3);
+            box-shadow: 0 0 30px rgba(0, 255, 128, 0.2);
+        }
+
+        .blog-header h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            color: #00ff80;
+            text-shadow: 0 0 20px rgba(0, 255, 128, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .blog-post {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(26, 26, 46, 0.3) 100%);
+            border: 2px solid rgba(0, 255, 128, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-post:hover {
+            border-color: rgba(0, 255, 128, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 255, 128, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .blog-post h3 {
+            color: #00ff80;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-meta {
+            color: #8a9bb8;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .blog-excerpt {
+            color: #b0c4de;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #00ff80;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(0, 255, 128, 0.3);
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            background: rgba(0, 255, 128, 0.1);
+            box-shadow: 0 0 15px rgba(0, 255, 128, 0.2);
+        }
+
+        .categories {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            background: rgba(0, 255, 128, 0.1);
+            border: 1px solid rgba(0, 255, 128, 0.3);
+            border-radius: 25px;
+            color: #00ff80;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: rgba(0, 255, 128, 0.2);
+            box-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <header class="blog-header">
+            <h1>📝 Blog Tecnológico Orbix</h1>
+            <p>Últimas noticias, tendencias e innovaciones en tecnología e IA</p>
+        </header>
+
+        <div class="categories">
+            <button class="category-btn active" data-category="all">Todos</button>
+            <button class="category-btn" data-category="ia">Inteligencia Artificial</button>
+            <button class="category-btn" data-category="ciberseguridad">Ciberseguridad</button>
+            <button class="category-btn" data-category="desarrollo">Desarrollo</button>
+            <button class="category-btn" data-category="innovacion">Innovación</button>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-post" data-category="ia">
+                <h3>🤖 El Futuro de la IA en Ae.N.K.I.</h3>
+                <div class="blog-meta">
+                    <span>📅 20 Agosto 2025</span>
+                    <span>👤 Equipo Orbix</span>
+                    <span>🏷️ IA</span>
+                </div>
+                <p class="blog-excerpt">
+                    Descubre cómo Ae.N.K.I. está revolucionando la integración de conocimiento neural autónomo. 
+                    Exploramos las últimas innovaciones en procesamiento de lenguaje natural y aprendizaje automático 
+                    que hacen posible una IA verdaderamente inteligente.
+                </p>
+                <a href="#" class="read-more">Leer más →</a>
+            </article>
+
+            <article class="blog-post" data-category="ciberseguridad">
+                <h3>🛡️ Sentinel: Protección Avanzada</h3>
+                <div class="blog-meta">
+                    <span>📅 18 Agosto 2025</span>
+                    <span>👤 Equipo Seguridad</span>
+                    <span>🏷️ Ciberseguridad</span>
+                </div>
+                <p class="blog-excerpt">
+                    Análisis profundo de las amenazas cibernéticas actuales y cómo Sentinel utiliza 
+                    algoritmos de detección en tiempo real para proteger infraestructuras críticas. 
+                    Casos de estudio y métricas de efectividad.
+                </p>
+                <a href="#" class="read-more">Leer más →</a>
+            </article>
+
+            <article class="blog-post" data-category="desarrollo">
+                <h3>⚡ Arquitectura de Microservicios</h3>
+                <div class="blog-meta">
+                    <span>📅 15 Agosto 2025</span>
+                    <span>👤 Dev Team</span>
+                    <span>🏷️ Desarrollo</span>
+                </div>
+                <p class="blog-excerpt">
+                    Cómo implementamos una arquitectura escalable para nuestros sistemas de IA. 
+                    Desde Flask hasta Docker, exploramos las tecnologías que potencian nuestras soluciones 
+                    y permiten una integración seamless.
+                </p>
+                <a href="#" class="read-more">Leer más →</a>
+            </article>
+
+            <article class="blog-post" data-category="innovacion">
+                <h3>🚀 Innovaciones en Tutorium Learning</h3>
+                <div class="blog-meta">
+                    <span>📅 12 Agosto 2025</span>
+                    <span>👤 Equipo Educación</span>
+                    <span>🏷️ Innovación</span>
+                </div>
+                <p class="blog-excerpt">
+                    La revolución educativa con IA: tutores virtuales personalizados, evaluación automática 
+                    y certificaciones blockchain. Descubre cómo estamos transformando el aprendizaje digital 
+                    con tecnología de vanguardia.
+                </p>
+                <a href="#" class="read-more">Leer más →</a>
+            </article>
+
+            <article class="blog-post" data-category="ciberseguridad">
+                <h3>🔒 Zero Trust Architecture</h3>
+                <div class="blog-meta">
+                    <span>📅 10 Agosto 2025</span>
+                    <span>👤 Security Research</span>
+                    <span>🏷️ Ciberseguridad</span>
+                </div>
+                <p class="blog-excerpt">
+                    Implementación de arquitecturas Zero Trust en entornos empresariales. 
+                    Análisis de casos reales, mejores prácticas y cómo Orbix Sentinel facilita 
+                    la transición hacia modelos de seguridad más robustos.
+                </p>
+                <a href="#" class="read-more">Leer más →</a>
+            </article>
+
+            <article class="blog-post" data-category="ia">
+                <h3>🧠 Machine Learning Explicable</h3>
+                <div class="blog-meta">
+                    <span>📅 8 Agosto 2025</span>
+                    <span>👤 AI Research</span>
+                    <span>🏷️ IA</span>
+                </div>
+                <p class="blog-excerpt">
+                    La importancia de la transparencia en algoritmos de IA. Exploramos técnicas 
+                    de XAI (Explainable AI) y cómo implementamos interpretabilidad en nuestros 
+                    modelos para mayor confianza y adopción empresarial.
+                </p>
+                <a href="#" class="read-more">Leer más →</a>
+            </article>
+        </div>
+
+        <div id="navButtons"></div>
+    </div>
+
+    <script src="nav-global.js"></script>
+    <script>
+        // Funcionalidad de filtrado por categorías
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const blogPosts = document.querySelectorAll('.blog-post');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Actualizar botones activos
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filtrar posts
+                    blogPosts.forEach(post => {
+                        if (category === 'all' || post.getAttribute('data-category') === category) {
+                            post.style.display = 'block';
+                            post.style.animation = 'fadeIn 0.5s ease';
+                        } else {
+                            post.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Añadir botones de navegación
+            const navButtonsContainer = document.getElementById('navButtons');
+            navButtonsContainer.innerHTML = createNavButtons();
+        });
+
+        // Animación CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

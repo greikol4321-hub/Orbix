@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentos y Análisis de Mercado - Orbix | Estudios Tecnológicos</title>
+    <meta name="description" content="Documentos técnicos de Orbix: análisis de competencia, tendencias del mercado tecnológico y estudios de viabilidad para proyectos de desarrollo web y apps móviles.">
+    <meta name="keywords" content="análisis mercado tecnológico, documentos técnicos, competencia desarrollo web, tendencias apps móviles, estudios viabilidad, Orbix investigación">
+    <meta name="author" content="Orbix">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orbix.com/documentos">
+    <meta property="og:title" content="Documentos y Análisis de Mercado - Orbix">
+    <meta property="og:description" content="Accede a documentos técnicos, análisis de competencia y estudios de mercado tecnológico de Orbix.">
+    <meta property="og:image" content="https://orbix.com/assets/images/orbix-documents-preview.jpg">
+    <meta property="og:site_name" content="Orbix">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://orbix.com/documentos">
+    <meta property="twitter:title" content="Documentos y Análisis de Mercado - Orbix">
+    <meta property="twitter:description" content="Documentos técnicos y análisis de mercado tecnológico de Orbix.">
+    <meta property="twitter:image" content="https://orbix.com/assets/images/orbix-documents-preview.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://orbix.com/documentos">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="nav-global.css">
+    <link rel="stylesheet" href="sentinel-unified.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Documentos Técnicos Orbix",
+      "description": "Documentos técnicos, análisis de competencia y estudios de mercado tecnológico",
+      "url": "https://orbix.com/documentos",
+      "mainEntity": {
+        "@type": "CreativeWork",
+        "name": "Análisis de Competencia y Tendencia del Mercado",
+        "description": "Documento completo con análisis detallado de la competencia actual y tendencias emergentes del mercado tecnológico",
+        "author": {
+          "@type": "Organization",
+          "name": "Orbix"
+        },
+        "datePublished": "2025-08-20",
+        "inLanguage": "es"
+      }
+    }
+    </script>
+    <style>
+        .documents-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .document-panel {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(0, 255, 128, 0.3);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .document-panel h1 {
+            color: #00ff80;
+            font-family: 'Orbitron', monospace;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(0, 255, 128, 0.3);
+        }
+        
+        .document-description {
+            color: #e0e6f6;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .doc-btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Orbitron', monospace;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .download-btn {
+            background: linear-gradient(45deg, #00ff80, #0080ff);
+            color: #000;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 255, 128, 0.4);
+        }
+        
+        .view-btn {
+            background: linear-gradient(45deg, #0080ff, #8000ff);
+            color: #fff;
+        }
+        
+        .view-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 128, 255, 0.4);
+        }
+        
+        .pdf-viewer-container {
+            margin-top: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        #pdfViewer {
+            display: none;
+            width: 100%;
+            height: 700px;
+            border: 2px solid rgba(0, 255, 128, 0.3);
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        
+        .viewer-controls {
+            display: none;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .control-btn {
+            background: rgba(0, 255, 128, 0.1);
+            border: 1px solid rgba(0, 255, 128, 0.3);
+            color: #00ff80;
+            padding: 8px 16px;
+            border-radius: 6px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-family: 'Exo 2', sans-serif;
+            transition: all 0.3s;
+        }
+        
+        .control-btn:hover {
+            background: rgba(0, 255, 128, 0.2);
+            border-color: #00ff80;
+        }
+        
+        @media (max-width: 768px) {
+            .documents-container {
+                padding: 0 15px;
+            }
+            
+            .document-panel {
+                padding: 25px;
+            }
+            
+            .document-panel h1 {
+                font-size: 1.8rem;
+            }
+            
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .doc-btn {
+                width: 200px;
+            }
+            
+            #pdfViewer {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <h1>📄 Documentos Orbix</h1>
+            <p>Análisis de competencia y tendencias del mercado</p>
+        </header>
+
+        <main>
+            <div class="documents-container">
+                <div class="document-panel">
+                    <h1>📊 Análisis de Competencia y Tendencia del Mercado</h1>
+                    <p class="document-description">
+                        Documento completo con análisis detallado de la competencia actual, 
+                        tendencias emergentes del mercado tecnológico y oportunidades de crecimiento 
+                        para Orbix en el sector de desarrollo web y aplicaciones móviles.
+                    </p>
+                    
+                    <div class="buttons-container">
+                        <a href="Analisis.pdf" download class="doc-btn download-btn">
+                            📥 Descargar PDF
+                        </a>
+                        <button class="doc-btn view-btn" onclick="mostrarPDF()">
+                            👁️ Ver PDF Online
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="pdf-viewer-container">
+                    <iframe id="pdfViewer"></iframe>
+                    <div class="viewer-controls" id="viewerControls">
+                        <button class="control-btn" onclick="ocultarPDF()">❌ Cerrar Visor</button>
+                        <button class="control-btn" onclick="toggleFullscreen()">🔍 Pantalla Completa</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="navigation-section panel">
+                <h2>🚀 Explora Más Soluciones Orbix</h2>
+                <div id="navButtons"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="nav-global.js"></script>
+    <script>
+        function mostrarPDF() {
+            const viewer = document.getElementById("pdfViewer");
+            const controls = document.getElementById("viewerControls");
+            
+            if (viewer.style.display === "none" || viewer.style.display === "") {
+                viewer.src = "Analisis.pdf";
+                viewer.style.display = "block";
+                controls.style.display = "block";
+                
+                // Scroll suave hacia el visor
+                viewer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                ocultarPDF();
+            }
+        }
+        
+        function ocultarPDF() {
+            const viewer = document.getElementById("pdfViewer");
+            const controls = document.getElementById("viewerControls");
+            
+            viewer.style.display = "none";
+            controls.style.display = "none";
+            viewer.src = "";
+        }
+        
+        function toggleFullscreen() {
+            const viewer = document.getElementById("pdfViewer");
+            
+            if (viewer.requestFullscreen) {
+                viewer.requestFullscreen();
+            } else if (viewer.webkitRequestFullscreen) {
+                viewer.webkitRequestFullscreen();
+            } else if (viewer.msRequestFullscreen) {
+                viewer.msRequestFullscreen();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtonsContainer = document.getElementById('navButtons');
+            if (navButtonsContainer) {
+                navButtonsContainer.innerHTML = createNavButtons();
+            }
+        });
+    </script>
+</body>
+</html>

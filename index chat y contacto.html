@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto y Chat IA - Orbix | Desarrollo Web y Apps Móviles</title>
+    <meta name="description" content="Contacta con Orbix para desarrollo web, aplicaciones móviles e inteligencia artificial. Chat IA disponible 24/7 para consultas técnicas y cotizaciones.">
+    <meta name="keywords" content="Orbix contacto, desarrollo web, aplicaciones móviles, IA, chat inteligente, consultoría tecnológica, programación, diseño web">
+    <meta name="author" content="Orbix">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orbix.com/contacto-chat">
+    <meta property="og:title" content="Contacto y Chat IA - Orbix">
+    <meta property="og:description" content="Contacta con Orbix para desarrollo web, aplicaciones móviles e IA. Chat inteligente disponible 24/7.">
+    <meta property="og:image" content="https://orbix.com/assets/images/orbix-contact-preview.jpg">
+    <meta property="og:site_name" content="Orbix">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://orbix.com/contacto-chat">
+    <meta property="twitter:title" content="Contacto y Chat IA - Orbix">
+    <meta property="twitter:description" content="Contacta con Orbix para desarrollo web, aplicaciones móviles e IA. Chat inteligente disponible 24/7.">
+    <meta property="twitter:image" content="https://orbix.com/assets/images/orbix-contact-preview.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://orbix.com/contacto-chat">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="nav-global.css">
+    <link rel="stylesheet" href="sentinel-unified.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contacto Orbix",
+      "description": "Página de contacto y chat IA de Orbix para consultas sobre desarrollo web, aplicaciones móviles e inteligencia artificial",
+      "url": "https://orbix.com/contacto-chat",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Orbix",
+        "description": "Empresa especializada en desarrollo web, aplicaciones móviles e inteligencia artificial",
+        "url": "https://orbix.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "availableLanguage": ["Spanish", "English"]
+        },
+        "sameAs": [
+          "https://twitter.com/orbix",
+          "https://linkedin.com/company/orbix",
+          "https://github.com/orbix"
+        ]
+      }
+    }
+    </script>
+    <style>
+        .contact-chat-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 30px auto;
+            max-width: 1400px;
+            padding: 0 20px;
+        }
+        
+        .contact-panel, .chat-panel {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(0, 255, 128, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            min-height: 500px;
+        }
+        
+        .contact-panel h2, .chat-panel h2 {
+            color: #00ff80;
+            font-family: 'Orbitron', monospace;
+            margin-bottom: 25px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
+            font-size: 1.4rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e0e6f6;
+            font-weight: 500;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 255, 128, 0.3);
+            border-radius: 6px;
+            color: #e0e6f6;
+            font-family: 'Exo 2', sans-serif;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #00ff80;
+            box-shadow: 0 0 10px rgba(0, 255, 128, 0.2);
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+            background: linear-gradient(45deg, #00ff80, #0080ff);
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+            font-family: 'Orbitron', monospace;
+            font-size: 16px;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 128, 0.3);
+        }
+        
+        .chat-container {
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid rgba(0, 255, 128, 0.2);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            padding: 12px 18px;
+            border-radius: 15px;
+            max-width: 75%;
+            word-break: break-word;
+            line-height: 1.4;
+        }
+        
+        .message.user {
+            background: linear-gradient(45deg, #00ff80, #0080ff);
+            color: #000;
+            margin-left: auto;
+            text-align: right;
+        }
+        
+        .message.bot {
+            background: rgba(0, 255, 128, 0.1);
+            color: #e0e6f6;
+            border: 1px solid rgba(0, 255, 128, 0.3);
+        }
+        
+        .chat-input-area {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .chat-input-area {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0, 255, 128, 0.1);
+        }
+        
+        .chat-input {
+            flex: 1;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 255, 128, 0.3);
+            border-radius: 6px;
+            color: #e0e6f6;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 14px;
+        }
+        
+        .chat-btn {
+            padding: 8px 12px;
+            background: linear-gradient(45deg, #00ff80, #0080ff);
+            border: none;
+            border-radius: 6px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Orbitron', monospace;
+            font-size: 12px;
+            transition: transform 0.2s;
+            min-width: 60px;
+        }
+        
+        .chat-btn:hover {
+            transform: translateY(-1px);
+        }
+        
+        .chat-btn.clear {
+            background: linear-gradient(45deg, #ff4757, #ff3838);
+            color: #fff;
+        }
+        
+        .success-message {
+            color: #00ff80;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            background: rgba(0, 255, 128, 0.1);
+        }
+        
+        #contactStatus {
+            margin-top: 15px;
+        }
+        
+        @media (max-width: 1200px) {
+            .contact-chat-container {
+                max-width: 1000px;
+                gap: 20px;
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-chat-container {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+            
+            .contact-panel, .chat-panel {
+                padding: 20px;
+                min-height: auto;
+            }
+            
+            .chat-container {
+                height: 350px;
+            }
+            
+            .contact-panel h2, .chat-panel h2 {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-chat-container {
+                padding: 0 10px;
+                margin: 15px auto;
+            }
+            
+            .contact-panel, .chat-panel {
+                padding: 15px;
+            }
+            
+            .chat-container {
+                height: 300px;
+            }
+            
+            .chat-messages {
+                margin-bottom: 20px;
+            }
+            
+            .chat-input-area {
+                margin-top: 12px;
+                padding-top: 12px;
+            }
+            
+            .chat-btn {
+                padding: 6px 10px;
+                font-size: 11px;
+                min-width: 50px;
+            }
+            
+            .chat-input-area {
+                gap: 6px;
+            }
+        }
+        
+        /* Mejoras adicionales para espaciado */
+        .navigation-section {
+            margin-top: 50px;
+            padding: 35px;
+            border-radius: 12px;
+        }
+        
+        .navigation-section h2 {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        #navButtons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .main-container {
+            padding: 20px 0;
+        }
+        
+        .header {
+            margin-bottom: 35px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <h1>📞 Contacto & Chat IA</h1>
+            <p>Conéctate con Orbix - Formulario de contacto y chat inteligente</p>
+        </header>
+
+        <main>
+            <div class="contact-chat-container">
+                <div class="contact-panel">
+                    <h2>✉️ Formulario de Contacto</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu proyecto o consulta..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    </form>
+                    <div id="contactStatus"></div>
+                </div>
+
+                <div class="chat-panel">
+                    <h2>🤖 Chat con IA de Orbix</h2>
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="message bot">
+                                ¡Hola! Soy la IA de Orbix. ¿En qué puedo ayudarte hoy?
+                            </div>
+                        </div>
+                        
+                        <div class="chat-input-area">
+                            <input type="text" id="chatInput" class="chat-input" placeholder="Escribe tu mensaje aquí..." onkeypress="handleKeyPress(event)">
+                            <button onclick="sendMessage()" class="chat-btn">Enviar</button>
+                            <button onclick="clearChat()" class="chat-btn clear">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="navigation-section panel">
+                <h2>🚀 Explora Más Soluciones Orbix</h2>
+                <div id="navButtons"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="nav-global.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                nombre: document.getElementById('nombre').value,
+                correo: document.getElementById('correo').value,
+                mensaje: document.getElementById('mensaje').value
+            };
+            
+            try {
+                const response = await fetch('/contacto', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                document.getElementById('contactStatus').innerHTML = 
+                    '<div class="success-message">✅ ' + result.msg + '</div>';
+                document.getElementById('contactForm').reset();
+            } catch (error) {
+                document.getElementById('contactStatus').innerHTML = 
+                    '<div style="color: #ff4757;">❌ Error al enviar el mensaje.</div>';
+            }
+        });
+
+        function addMessage(message, isUser = false) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
+            messageDiv.textContent = message;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            addMessage(message, true);
+            input.value = '';
+            
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ mensaje: message })
+                });
+                
+                const result = await response.json();
+                addMessage(result.respuesta || 'Lo siento, hubo un error al procesar tu mensaje.');
+            } catch (error) {
+                addMessage('Error al conectar con la IA. Por favor, intenta más tarde.');
+            }
+        }
+
+        function clearChat() {
+            const messagesContainer = document.getElementById('chatMessages');
+            messagesContainer.innerHTML = '<div class="message bot">¡Hola! Soy la IA de Orbix. ¿En qué puedo ayudarte hoy?</div>';
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtonsContainer = document.getElementById('navButtons');
+            if (navButtonsContainer) {
+                navButtonsContainer.innerHTML = createNavButtons();
+            }
+        });
+    </script>
+</body>
+</html>

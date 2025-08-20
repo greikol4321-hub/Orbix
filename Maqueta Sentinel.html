@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel - Dashboard de Ciberseguridad | Orbix Security Platform</title>
+    <meta name="description" content="Sentinel: Dashboard avanzado de ciberseguridad de Orbix. Monitoreo en tiempo real, análisis de amenazas y protección integral para empresas digitales.">
+    <meta name="keywords" content="Sentinel dashboard, ciberseguridad, monitoreo tiempo real, análisis amenazas, seguridad digital, Orbix security, protección empresarial">
+    <meta name="author" content="Orbix">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orbix.com/sentinel">
+    <meta property="og:title" content="Sentinel - Dashboard de Ciberseguridad Orbix">
+    <meta property="og:description" content="Plataforma avanzada de ciberseguridad con monitoreo en tiempo real y análisis de amenazas.">
+    <meta property="og:image" content="https://orbix.com/assets/images/sentinel-preview.jpg">
+    <meta property="og:site_name" content="Orbix">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Sentinel - Dashboard de Ciberseguridad">
+    <meta property="twitter:description" content="Plataforma de seguridad digital avanzada de Orbix.">
+    <meta property="twitter:image" content="https://orbix.com/assets/images/sentinel-preview.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://orbix.com/sentinel">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="nav-global.css">
+    <link rel="stylesheet" href="sentinel-unified.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer onload="console.log('Chart.js cargado')"></script>
+    <script src="nav-global.js" defer></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sentinel Dashboard",
+      "description": "Dashboard avanzado de ciberseguridad para monitoreo en tiempo real y análisis de amenazas",
+      "url": "https://orbix.com/sentinel",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web-based",
+      "creator": {
+        "@type": "Organization",
+        "name": "Orbix"
+      },
+      "featureList": [
+        "Monitoreo en tiempo real",
+        "Análisis de amenazas",
+        "Dashboard interactivo",
+        "Alertas de seguridad",
+        "Reportes automatizados"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <header class="header">
+                <h1>🛡️ SENTINEL</h1>
+                <p>Panel de Riesgos de Ciberseguridad - Monitoreo en Tiempo Real</p>
+            </header>
+
+            <!-- Métricas Principales en la Parte Superior -->
+            <div class="metrics-overview">
+                <div class="metric-card">
+                    <div class="metric-value" id="activeConnections">127</div>
+                    <div class="metric-label">Conexiones Activas</div>
+                </div>
+                
+                <div class="metric-card critical">
+                    <div class="metric-value" id="criticalAlerts">4</div>
+                    <div class="metric-label">Alertas Críticas</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value" id="uptime">99.8%</div>
+                    <div class="metric-label">Tiempo Activo</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value" id="responseTime">2.3s</div>
+                    <div class="metric-label">Tiempo Respuesta</div>
+                </div>
+            </div>
+
+            <!-- Dashboard Principal Grid Reorganizado -->
+            <div class="dashboard-container">
+                <!-- Sección Superior: Conexiones + Gráfico -->
+                <div class="top-section">
+                    <!-- Panel de Conexiones Activas -->
+                    <div class="panel connections-panel">
+                        <h2>🔗 Conexiones Activas</h2>
+                        <div class="table-container">
+                            <table class="connections-table">
+                                <thead>
+                                    <tr>
+                                        <th>IP Address</th>
+                                        <th>Usuario</th>
+                                        <th>Dispositivo</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>192.168.0.10</td>
+                                        <td>admin</td>
+                                        <td>Windows 11</td>
+                                        <td><span class="status secure">Seguro</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>192.168.0.25</td>
+                                        <td>user01</td>
+                                        <td>Ubuntu 22.04</td>
+                                        <td><span class="status suspicious">Sospechoso</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>192.168.0.45</td>
+                                        <td>developer</td>
+                                        <td>macOS Ventura</td>
+                                        <td><span class="status secure">Seguro</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>192.168.0.78</td>
+                                        <td>guest</td>
+                                        <td>Android 13</td>
+                                        <td><span class="status secure">Seguro</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10.0.0.156</td>
+                                        <td>unknown</td>
+                                        <td>Linux Server</td>
+                                        <td><span class="status suspicious">Sospechoso</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>192.168.0.99</td>
+                                        <td>engineer</td>
+                                        <td>Windows 10</td>
+                                        <td><span class="status secure">Seguro</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Panel de Gráfico -->
+                    <div class="panel chart-panel">
+                <h2>📊 Análisis de Seguridad</h2>
+                <div class="chart-container">
+                    <canvas id="securityChart"></canvas>
+                    <!-- Fallback visual si Chart.js no carga -->
+                    <div id="chartFallback" style="display: none; text-align: center; padding: 40px;">
+                        <div style="width: 200px; height: 200px; border-radius: 50%; background: conic-gradient(#00ff80 0deg 288deg, #ff4757 288deg 360deg); margin: 0 auto 20px; position: relative;">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #1a1a2e; width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                                Seguridad<br>80%
+                            </div>
+                        </div>
+                        <div style="color: #00ff80; margin: 5px;">● Conexiones Seguras (80%)</div>
+                        <div style="color: #ff4757; margin: 5px;">● Conexiones Sospechosas (20%)</div>
+                    </div>
+                </div>
+                <div class="stats-summary">
+                    <div class="stat-item">
+                        <div class="stat-number secure">80%</div>
+                        <div class="stat-label">Conexiones Seguras</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number suspicious">20%</div>
+                        <div class="stat-label">Conexiones Sospechosas</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Sección Inferior: Alertas de Seguridad -->
+            <div class="bottom-section">
+                <div class="panel alerts-panel">
+                    <h2>🚨 Alertas de Seguridad</h2>
+                    <div class="alerts-container">
+                        <div class="alert-card high">
+                            <div class="alert-severity">Alta</div>
+                            <div class="alert-title">🔴 Intrusión sospechosa detectada en servidor 3</div>
+                            <div class="alert-time">Hace 5 minutos - IP: 10.0.0.156</div>
+                        </div>
+                        
+                        <div class="alert-card medium">
+                        <div class="alert-severity">Media</div>
+                        <div class="alert-title">⚠️ Proceso no reconocido en host Linux</div>
+                        <div class="alert-time">Hace 12 minutos - Usuario: unknown</div>
+                    </div>
+                    
+                    <div class="alert-card high">
+                        <div class="alert-severity">Alta</div>
+                        <div class="alert-title">🔒 Acceso no autorizado al sistema</div>
+                        <div class="alert-time">Hace 18 minutos - IP: 192.168.0.25</div>
+                    </div>
+                    
+                    <div class="alert-card low">
+                        <div class="alert-severity">Baja</div>
+                        <div class="alert-title">📡 Conexión desde dispositivo desconocido</div>
+                        <div class="alert-time">Hace 25 minutos - Dispositivo: Android</div>
+                    </div>
+                    
+                    <div class="alert-card medium">
+                        <div class="alert-severity">Media</div>
+                        <div class="alert-title">🌐 Tráfico anómalo detectado en red</div>
+                        <div class="alert-time">Hace 32 minutos - Puerto: 8080</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para inicializar el gráfico cuando Chart.js esté disponible
+        function initializeChart() {
+            // Verificar si Chart.js está cargado
+            if (typeof Chart === 'undefined') {
+                console.error('Chart.js no está cargado, mostrando fallback');
+                showChartFallback();
+                return;
+            }
+
+            const chartCanvas = document.getElementById('securityChart');
+            if (!chartCanvas) {
+                console.error('Elemento canvas securityChart no encontrado');
+                showChartFallback();
+                return;
+            }
+
+            // Ocultar fallback si está visible
+            const fallback = document.getElementById('chartFallback');
+            if (fallback) fallback.style.display = 'none';
+
+            // Configuración del gráfico
+            const ctx = chartCanvas.getContext('2d');
+            
+            try {
+                const chart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Conexiones Seguras', 'Conexiones Sospechosas'],
+                        datasets: [{
+                            data: [80, 20],
+                            backgroundColor: [
+                                'rgba(0, 255, 128, 0.8)',
+                                'rgba(255, 71, 87, 0.8)'
+                            ],
+                            borderColor: [
+                                '#00ff80',
+                                '#ff4757'
+                            ],
+                            borderWidth: 2,
+                            hoverBorderWidth: 4,
+                            hoverBackgroundColor: [
+                                'rgba(0, 255, 128, 1)',
+                                'rgba(255, 71, 87, 1)'
+                            ]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: '#ffffff',
+                                    font: {
+                                family: 'Exo 2',
+                                size: 12
+                            },
+                            padding: 20,
+                            usePointStyle: true,
+                            pointStyle: 'circle'
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleColor: '#ffffff',
+                        bodyColor: '#ffffff',
+                        borderColor: '#00d4ff',
+                        borderWidth: 1,
+                        cornerRadius: 8,
+                        displayColors: true,
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                },
+                elements: {
+                    arc: {
+                        borderRadius: 8
+                    }
+                }
+            }
+        });
+
+        console.log('✅ Gráfico de seguridad inicializado correctamente');
+
+        // Simulación de actualizaciones en tiempo real
+        function updateSecurityData() {
+            if (!chart) return;
+            
+            // Simular cambios en los datos
+            const secureConnections = Math.floor(Math.random() * 20) + 70; // 70-90%
+            const suspiciousConnections = 100 - secureConnections;
+            
+            chart.data.datasets[0].data = [secureConnections, suspiciousConnections];
+            chart.update();
+            
+            // Actualizar estadísticas en el gráfico
+            const chartSecure = document.getElementById('chartSecure');
+            const chartSuspicious = document.getElementById('chartSuspicious');
+            if (chartSecure) chartSecure.textContent = secureConnections + '%';
+            if (chartSuspicious) chartSuspicious.textContent = suspiciousConnections + '%';
+            
+            // Actualizar métricas principales
+            const activeConnections = document.getElementById('activeConnections');
+            const criticalAlerts = document.getElementById('criticalAlerts');
+            const uptime = document.getElementById('uptime');
+            const responseTime = document.getElementById('responseTime');
+            
+            if (activeConnections) activeConnections.textContent = Math.floor(Math.random() * 50) + 100;
+            if (criticalAlerts) criticalAlerts.textContent = Math.floor(Math.random() * 8) + 1;
+            if (uptime) uptime.textContent = (Math.random() * 0.5 + 99.5).toFixed(1) + '%';
+            if (responseTime) responseTime.textContent = (Math.random() * 2 + 1).toFixed(1) + 's';
+        }
+
+        // Actualizar cada 8 segundos para una demo más dinámica
+        setInterval(updateSecurityData, 8000);
+
+        return chart;
+
+        } catch (error) {
+            console.error('Error al crear el gráfico:', error);
+            showChartFallback();
+        }
+    }
+
+    // Función para mostrar gráfico de respaldo
+    function showChartFallback() {
+        const canvas = document.getElementById('securityChart');
+        const fallback = document.getElementById('chartFallback');
+        
+        if (canvas) canvas.style.display = 'none';
+        if (fallback) fallback.style.display = 'block';
+        
+        console.log('📊 Mostrando gráfico de respaldo CSS');
+    }
+
+        // Efecto de animación para alertas críticas
+        function animateHighAlerts() {
+            const highAlerts = document.querySelectorAll('.alert-card.high');
+            highAlerts.forEach((alert, index) => {
+                setTimeout(() => {
+                    alert.style.animation = 'pulse 2s infinite';
+                }, index * 500);
+            });
+        }
+
+        // Inicializar efectos y animaciones
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar gráfico inmediatamente si Chart.js ya está disponible
+            if (typeof Chart !== 'undefined') {
+                initializeChart();
+            } else {
+                // Si no está disponible, intentar después de un delay
+                setTimeout(initializeChart, 500);
+                // Y también intentar cada segundo hasta que funcione
+                const chartInterval = setInterval(() => {
+                    if (typeof Chart !== 'undefined') {
+                        initializeChart();
+                        clearInterval(chartInterval);
+                    }
+                }, 1000);
+            }
+            
+            animateHighAlerts();
+            
+            // Efecto de entrada para las métricas
+            const metricCards = document.querySelectorAll('.metrics-overview .metric-card');
+            metricCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.animation = 'fadeInUp 0.6s ease forwards';
+                }, index * 150);
+            });
+            
+            // Efecto de entrada para alertas
+            const alertCards = document.querySelectorAll('.alert-card');
+            alertCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.animation = 'fadeInUp 0.6s ease forwards';
+                }, index * 200 + 500);
+            });
+            
+            // Simular estado del sistema
+            console.log('🛡️ Sentinel Dashboard - Sistema de Monitoreo Activo');
+        });
+
+        // Efecto hover mejorado para las filas de la tabla
+        document.querySelectorAll('.connections-table tr').forEach(row => {
+            row.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+                this.style.boxShadow = '0 4px 15px rgba(0, 212, 255, 0.3)';
+            });
+            
+            row.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    </script>
+
+    <div class="navigation-section">
+        <h2>🚀 Explora Más Soluciones Orbix</h2>
+        <div id="navButtons"></div>
+    </div>
+    </div>
+
+    <script src="nav-global.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtonsContainer = document.getElementById('navButtons');
+            if (navButtonsContainer) {
+                navButtonsContainer.innerHTML = createNavButtons();
+            }
+        });
+    </script>
+</body>
+</html>

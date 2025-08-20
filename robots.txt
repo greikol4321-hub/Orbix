@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://orbix.com/sitemap.xml
+
+# Políticas específicas para bots de búsqueda
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Archivos que no deben indexarse
+Disallow: /assets/temp/
+Disallow: /*.pdf$
+
+# Permitir archivos CSS y JS para mejor rendering
+Allow: /*.css$
+Allow: /*.js$
